@@ -1,0 +1,7 @@
+{
+  "name": "inabie",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

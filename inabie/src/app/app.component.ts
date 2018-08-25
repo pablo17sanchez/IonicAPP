@@ -7,6 +7,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { Home2Page } from "../pages/home2/home2";
 import { ListPage } from '../pages/list/list';
 import { Component, ViewChild } from "@angular/core";
+import { TerminosPage } from '../pages/terminos/terminos';
+import {QuienesSomosPage  } from "../pages/quienes-somos/quienes-somos";
 @Component({
   templateUrl: 'app.html'
 })
@@ -38,7 +40,18 @@ export class MyApp {
   }
   inicio(){
    
-    this.nav.push(Home2Page);
+    this.nav.push(HomePage);
+  }
+
+
+  terminos(){
+   
+    this.nav.push(TerminosPage);
+  }
+
+  QuienesSomos(){
+   
+    this.nav.push(QuienesSomosPage);
   }
   openPage(page) {
     // Reset the content nav to have just this page

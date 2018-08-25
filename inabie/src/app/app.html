@@ -14,13 +14,50 @@
                 <ion-icon name="home"></ion-icon> Inicio
             </ion-item>
 
+            <ion-item class="item-icon-left" menu-close (click)="terminos()">
+                <ion-icon name="book"></ion-icon>Terminos y condiciones
+            </ion-item>
 
 
 
-
-            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
-      </button>
+      </button> -->
+        </ion-list>
+        <ion-list>
+            <ion-list-header>
+                Sobre Nosotros
+              </ion-list-header>
+              <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                ¿Quiénes Somos? 
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                Historia 
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                Organigrama 
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                Despacho del director 
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+              Marco Legal
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-list-header>
+                Servicios
+              </ion-list-header>
+              <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                Servicio de Alimentación Escolar (PAE)
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+           Servicio de Nutricion y Salud
+            </ion-item>
+            <ion-item class="item-icon-left" menu-close (click)="QuienesSomos()">
+                Programa de Servicio Social 
+            </ion-item>
+            
         </ion-list>
     </ion-content>
 

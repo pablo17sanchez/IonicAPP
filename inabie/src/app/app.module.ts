@@ -1,3 +1,4 @@
+import { File } from '@ionic-native/file';
 
 
 
@@ -19,8 +20,7 @@ import { OrganigramaPage } from "../pages/organigrama/organigrama";
 //elements
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
+///import { File  } from "@ionic-native/File";
 @NgModule({
   declarations: [MyApp, HomePage, ListPage, PagesFooterPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],

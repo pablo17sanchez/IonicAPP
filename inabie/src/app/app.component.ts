@@ -1,3 +1,4 @@
+import { MarcoLegaPage } from './../pages/marco-lega/marco-lega';
 import { Home2Page } from './../pages/home2/home2';
 import { HomePage } from './../pages/home/home';
 
@@ -9,6 +10,9 @@ import { ListPage } from '../pages/list/list';
 import { Component, ViewChild } from "@angular/core";
 import { TerminosPage } from '../pages/terminos/terminos';
 import {QuienesSomosPage  } from "../pages/quienes-somos/quienes-somos";
+import { HistoriaPage } from '../pages/historia/historia';
+import { OrganigramaPage } from '../pages/organigrama/organigrama';
+import { DespachoDelDirectorPage } from '../pages/despacho-del-director/despacho-del-director';
 @Component({
   templateUrl: 'app.html'
 })
@@ -47,12 +51,42 @@ export class MyApp {
   terminos(){
    
     this.nav.push(TerminosPage);
+    console.log("terminos");
   }
 
   QuienesSomos(){
    
     this.nav.push(QuienesSomosPage);
   }
+
+
+  Historia(){
+
+this.nav.push(HistoriaPage);
+
+  }
+
+Organigrama(){
+
+
+this.nav.push(OrganigramaPage);
+
+}
+
+
+Despacho(){
+
+
+this.nav.push(DespachoDelDirectorPage)
+
+}
+
+MarcoLegal(){
+
+
+  this.nav.push(MarcoLegaPage)
+}
+
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario

@@ -20,7 +20,7 @@ export class HomePage {
   ionViewDidLoad() {
     setTimeout(() => this.splash = false, 4000);
 
-   // this.nav.push(TerminosPage); 
+  
   }
 
 }

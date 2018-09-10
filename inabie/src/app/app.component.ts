@@ -1,3 +1,4 @@
+import { AlimentacionPage } from './../pages/alimentacion/alimentacion';
 import { MarcoLegaPage } from './../pages/marco-lega/marco-lega';
 import { Home2Page } from './../pages/home2/home2';
 import { HomePage } from './../pages/home/home';
@@ -13,6 +14,8 @@ import {QuienesSomosPage  } from "../pages/quienes-somos/quienes-somos";
 import { HistoriaPage } from '../pages/historia/historia';
 import { OrganigramaPage } from '../pages/organigrama/organigrama';
 import { DespachoDelDirectorPage } from '../pages/despacho-del-director/despacho-del-director';
+import { SocialPage } from '../pages/social/social';
+import { SaludPage } from '../pages/salud/salud';
 @Component({
   templateUrl: 'app.html'
 })
@@ -65,7 +68,21 @@ export class MyApp {
 this.nav.push(HistoriaPage);
 
   }
+  Alimentacion() {
 
+    this.nav.push(AlimentacionPage);
+
+  } 
+  Social() {
+
+    this.nav.push(SocialPage);
+
+  }
+  Salud() {
+
+    this.nav.push(SaludPage);
+
+  }
 Organigrama(){
 
 

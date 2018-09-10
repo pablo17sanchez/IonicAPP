@@ -1,4 +1,6 @@
-import { File } from '@ionic-native/file';
+import { SaludPage } from './../pages/salud/salud';
+//import { AlimentacionPage } from './../pages/alimentacion/alimentacion';
+
 
 
 
@@ -17,15 +19,20 @@ import { HistoriaPage } from "../pages/historia/historia";
 import { MarcoLegaPage } from "./../pages/marco-lega/marco-lega";
 import { DespachoDelDirectorPage } from "./../pages/despacho-del-director/despacho-del-director";
 import { OrganigramaPage } from "../pages/organigrama/organigrama";
+
+
+import { AlimentacionPage } from "../pages/alimentacion/alimentacion";
+
 //elements
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 ///import { File  } from "@ionic-native/File";
+import { SocialPage } from '../pages/social/social';
 @NgModule({
-  declarations: [MyApp, HomePage, ListPage, PagesFooterPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage],
+  declarations: [MyApp, HomePage, ListPage, PagesFooterPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage,AlimentacionPage,SaludPage,SocialPage],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, ListPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage,DespachoDelDirectorPage,MarcoLegaPage],
+  entryComponents: [MyApp, HomePage, ListPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage, AlimentacionPage, SaludPage, SocialPage],
   providers: [
     StatusBar,
     SplashScreen,

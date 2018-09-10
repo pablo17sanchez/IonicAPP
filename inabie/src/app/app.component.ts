@@ -54,7 +54,7 @@ export class MyApp {
   terminos(){
    
     this.nav.push(TerminosPage);
-    console.log("terminos");
+ 
   }
 
   QuienesSomos(){

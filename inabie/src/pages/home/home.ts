@@ -2,8 +2,8 @@
 import { Component,ViewChild } from '@angular/core';
 import { NavController,Platform,Nav } from 'ionic-angular';
 import { ListPage  } from "../list/list";
-import { Home2Page } from "../home2/home2";
-import { TerminosPage } from "../terminos/terminos";
+
+
 import { CalendarioPage } from '../calendario/calendario';
 
 @Component({

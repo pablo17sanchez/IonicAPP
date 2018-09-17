@@ -11,9 +11,9 @@
 
         <ion-buttons end>
 
-            <button ion-button icon-only>
+            <!-- <button ion-button icon-only>
               <ion-icon name="add" (click)="addEvent()"></ion-icon>
-            </button>
+            </button> -->
         </ion-buttons>
     </ion-navbar>
 
@@ -22,7 +22,7 @@
 
 <ion-content>
 
-    <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" [locale]="calendar.locale" (onEventSelected)="onEventSelected($event)" (onTimeSelected)="onTimeSelected($event)" step="30" class="calendar"></calendar>
+    <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate" [locale]="calendar.locale" step="30" class="calendar"></calendar>
 
 
 </ion-content>

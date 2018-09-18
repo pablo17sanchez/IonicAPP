@@ -3,12 +3,6 @@ import { NavController, NavParams, ModalController, AlertController } from 'ioni
 
 import * as moment from "moment";
 
-/**
- * Generated class for the CalendarioPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: "page-calendario",
@@ -16,7 +10,11 @@ import * as moment from "moment";
 })
 export class CalendarioPage {
   public eventSource = [];
-  //eventSource;
+
+    public thesource = [];
+
+
+
   selectedDay = new Date();
   calendar = {
     mode: "month",
@@ -29,28 +27,27 @@ export class CalendarioPage {
   }
   createRandomEvents() {
     var events = [];
-    for (var i = 0; i < 50; i += 1) {
-      var date = new Date();
-      var eventType = Math.floor(Math.random() * 2);
-      var startDay = Math.floor(Math.random() * 90) - 45;
-      var endDay = Math.floor(Math.random() * 2) + startDay;
-      var startTime;
-      var endTime;
-      if (eventType === 0) {
-        startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
-        
 
 
-        endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
+    var date = new Date();
+    var eventType = 1;
 
-        events.push({
-          title: 'All Day - prueba ' + i,
-          startTime: startTime,
-          endTime: endTime
-          //, allDay: true
-        });
-      } 
-    }
+    var startDay = 1;
+    var endDay = 25;
+    var startTime;
+    var endTime;
+    startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
+
+
+
+    endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
+    events.push({
+      title: 'All Day - prueba ' ,
+      startTime: startTime,
+      endTime: endTime,
+      allDay: true
+    });
+    
     return events;
   }
   constructor(
@@ -59,6 +56,13 @@ export class CalendarioPage {
     private modalclr: ModalController,
     private alertCtrl: AlertController
   ) {
+
+
+
+
+
+
+
     this.loadEvents();
 
   }
@@ -68,6 +72,6 @@ export class CalendarioPage {
   }
 
   ionViewDidLoad() {
-   // console.log("ionViewDidLoad CalendarioPage");
+  
   }
 }

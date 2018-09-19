@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
+import { TextToSpeech } from "@ionic-native/text-to-speech";
 
-import * as moment from "moment";
 
 
 @Component({
@@ -11,9 +11,7 @@ import * as moment from "moment";
 export class CalendarioPage {
   public eventSource = [];
 
-    public thesource = [];
-
-
+ 
 
   selectedDay = new Date();
   calendar = {
@@ -28,7 +26,6 @@ export class CalendarioPage {
   createRandomEvents() {
     var events = [];
 
-
     var date = new Date();
     var eventType = 1;
 
@@ -36,42 +33,55 @@ export class CalendarioPage {
     var endDay = 25;
     var startTime;
     var endTime;
-    startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + startDay));
+    startTime = new Date(
+      Date.UTC(
+        1991,
+        date.getUTCMonth(),
+        date.getUTCDate() + startDay
+      )
+    );
 
+    endTime = new Date(
+      Date.UTC(
+       // date.getUTCFullYear()
+       2018
+        ,
+        date.getUTCMonth(),
+        date.getUTCDate() + endDay
+      )
+    );
 
-
-    endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + endDay));
+    console.log(startTime);
+    console.log(endTime);
     events.push({
-      title: 'All Day - prueba ' ,
+      title: "All Day - prueba ",
       startTime: startTime,
       endTime: endTime,
       allDay: true
     });
-    
+
     return events;
   }
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private modalclr: ModalController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private tts: TextToSpeech
   ) {
-
-
-
-
-
-
-
     this.loadEvents();
-
   }
 
   onTimeSelected(env) {
     this.selectedDay = env.selectedTime;
   }
 
-  ionViewDidLoad() {
-  
+  ionViewDidLoad() {}
+
+  leer() {
+    this.tts
+      .speak("Hello World")
+      .then(() => console.log("Success"))
+      .catch((reason: any) => console.log(reason));
   }
 }

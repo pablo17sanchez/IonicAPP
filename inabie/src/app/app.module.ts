@@ -1,11 +1,13 @@
+import { MapaPage } from './../pages/mapa/mapa';
 import { SaludPage } from './../pages/salud/salud';
 //import { AlimentacionPage } from './../pages/alimentacion/alimentacion';
 
-
-
+//Providers
+import { Geolocation } from "@ionic-native/geolocation";
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { TextToSpeech } from "@ionic-native/text-to-speech";
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 //pages
 import { MyApp } from './app.component';
@@ -23,7 +25,6 @@ import { CalendarioPage } from '../pages/calendario/calendario';
 
 
 import { AlimentacionPage } from "../pages/alimentacion/alimentacion";
-
 //elements
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,12 +32,47 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocialPage } from '../pages/social/social';
 import { NgCalendarModule } from "ionic2-calendar";
 @NgModule({
-  declarations: [MyApp, HomePage, ListPage, PagesFooterPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage,AlimentacionPage,SaludPage,SocialPage,CalendarioPage],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp),NgCalendarModule],
+  declarations: [
+    MyApp,
+    HomePage,
+    ListPage,
+    PagesFooterPage,
+    Home2Page,
+    TerminosPage,
+    QuienesSomosPage,
+    HistoriaPage,
+    OrganigramaPage,
+    DespachoDelDirectorPage,
+    MarcoLegaPage,
+    AlimentacionPage,
+    SaludPage,
+    SocialPage,
+    CalendarioPage,
+    MapaPage
+  ],
+  imports: [BrowserModule, IonicModule.forRoot(MyApp), NgCalendarModule],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, ListPage, Home2Page, TerminosPage, QuienesSomosPage, HistoriaPage, OrganigramaPage, DespachoDelDirectorPage, MarcoLegaPage, AlimentacionPage, SaludPage, SocialPage,CalendarioPage],
+  entryComponents: [
+    MyApp,
+    HomePage,
+    ListPage,
+    Home2Page,
+    TerminosPage,
+    QuienesSomosPage,
+    HistoriaPage,
+    OrganigramaPage,
+    DespachoDelDirectorPage,
+    MarcoLegaPage,
+    AlimentacionPage,
+    SaludPage,
+    SocialPage,
+    CalendarioPage,
+    MapaPage
+  ],
   providers: [
     StatusBar,
+    TextToSpeech,
+    Geolocation,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

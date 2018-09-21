@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { TextToSpeech } from "@ionic-native/text-to-speech";
-
-
+import { getData} from "../../data/data";
 
 @Component({
   selector: "page-calendario",
@@ -12,6 +11,8 @@ export class CalendarioPage {
   public eventSource = [];
 
  
+
+
 
   selectedDay = new Date();
   calendar = {
@@ -26,6 +27,15 @@ export class CalendarioPage {
   createRandomEvents() {
     var events = [];
 
+
+var data = getData();
+
+//console.log(JSON.stringify(data));
+    for (var a in data) {
+      console.log(a.title);
+    }
+
+
     var date = new Date();
     var eventType = 1;
 
@@ -33,30 +43,21 @@ export class CalendarioPage {
     var endDay = 25;
     var startTime;
     var endTime;
-    startTime = new Date(
-      Date.UTC(
-        1991,
-        date.getUTCMonth(),
-        date.getUTCDate() + startDay
-      )
-    );
+    startTime = new Date(Date.UTC(2018, date.getUTCMonth(), 1));
 
-    endTime = new Date(
-      Date.UTC(
-       // date.getUTCFullYear()
-       2018
-        ,
-        date.getUTCMonth(),
-        date.getUTCDate() + endDay
-      )
-    );
+    endTime = new Date(Date.UTC(2010, date.getUTCMonth(), 28));
 
-    console.log(startTime);
-    console.log(endTime);
+  
     events.push({
       title: "All Day - prueba ",
-      startTime: startTime,
-      endTime: endTime,
+      startTime: new Date(2018, 8, 24),
+      endTime: new Date(2018, 8, 24),
+      allDay: true
+    });
+    events.push({
+      title: "All Day - prueba ",
+      startTime: new Date(2018, 8, 25),
+      endTime: new Date(2018, 8, 25),
       allDay: true
     });
 
@@ -84,4 +85,6 @@ export class CalendarioPage {
       .then(() => console.log("Success"))
       .catch((reason: any) => console.log(reason));
   }
+
+
 }

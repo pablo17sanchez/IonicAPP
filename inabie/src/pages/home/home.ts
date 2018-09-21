@@ -25,10 +25,13 @@ export class HomePage {
   }
 
   Calendar() {
-    this.navCtrl.setRoot(CalendarioPage);
+    this.navCtrl.push(CalendarioPage);
+
+   
   }
 
   Mapa() {
-    this.navCtrl.setRoot(MapaPage);
+    this.navCtrl.push(MapaPage);
+ 
   }
 }
